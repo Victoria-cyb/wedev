@@ -47,7 +47,7 @@ document.getElementById('contact-form').addEventListener('submit', async (event)
     feedbackDiv.textContent = '';
 
     try {
-        const response = await fetch('/send', {
+        const response = await fetch('http://localhost:4000/send', {
             method: 'POST',
             body: new FormData(form),
         });
