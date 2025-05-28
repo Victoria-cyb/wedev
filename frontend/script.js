@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             const formData = new FormData(form);
-            const response = await fetch('http://localhost:4000/send', {
+            const response = await fetch('/send', {
                 method: 'POST',
                 body: formData, // multipart/form-data automatically handled
             });

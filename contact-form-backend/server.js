@@ -79,9 +79,9 @@ app.post('/send', async (req, res) => {
 });
 
 // Serve static files after routes
-if (process.env.NODE_ENV !== 'production') {
-  app.use(express.static('frontend'));
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   app.use(express.static('frontend'));
+// }
 
 // Catch-all for debugging
 app.use((req, res) => {
@@ -95,7 +95,9 @@ app.use((err, req, res, next) => {
     res.status(500).json({ message: 'Internal server error', error: err.message });
 });
 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+// const PORT = process.env.PORT || 4000;
+// app.listen(PORT, () => {
+//     console.log(`Server running on port ${PORT}`);
+// });
+
+module.exports = app;
